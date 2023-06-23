@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Odin Project | Rock Paper Scissors</title>
         <link rel="stylesheet" href="./styles.css">
+        <script src="app.js"></script>
     </head>
 
     <body>
@@ -15,20 +16,23 @@
                 <h2>Choose an option</h2>
             </div>
             <div class="game-objective">
-                <h3>First to score 5 points wins the game</h3>
+                <h3 id="Objective">First to score 5 points wins the game</h3>
             </div>
             <div class="game-container">
                 <div>
-                    <p>You: 0</p>
-                    <p class="player" id="player-you-roll">❓</p>
+                    <p class="player"  id="player-score">You: 0</p>
+                    <p class="player current-roll" id="player-you-roll">❓</p>
                 </div>
                 <div>
-                    <p>Computer: 0</p>
-                    <p class="player" id="player-computer-roll">❓</p>
+                    <p class="player" id="computer-score">Computer: 0</p>
+                    <p class="player current-roll" id="player-computer-roll">❓</p>
                     <div class="choose-option">
-                        <button>🪨</button>
-                        <button>🧻</button>
-                        <button>✂️</button>
+                        <button class="option-buttons" onclick="chooseRock()">🪨</button>
+                        <button class="option-buttons" onclick="choosePaper()">🧻</button>
+                        <button class="option-buttons" onclick="chooseScissors()">✂️</button>
+                    </div>
+                    <div class="reset-div">
+                        <button id="reset-button" onclick="resetGame()">Reset</button>
                     </div>
                 </div>
             </div>
